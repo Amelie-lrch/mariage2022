@@ -1,0 +1,369 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+.couleur{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: linear-gradient(rgb(22, 22, 116),rgb(63, 63, 194),rgb(56, 108, 206),rgb(90, 145, 209),rgb(89, 187, 204),rgb(137, 238, 245));
+}
+
+.confirmation{
+    margin-top: 100px;
+}
+.titres {
+    
+    margin-top: 70px;
+    font-size: 40px;
+    margin-bottom: 30px;
+    
+    }
+.prenom {
+    background-color: rgb(143, 209, 235);
+    width: 200px;
+    font-size: 20px;
+    font: message-box;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    border-radius: 16px;
+    margin-top: 20px;
+    border: black;
+}
+
+.mail {
+    background-color: rgb(143, 209, 235);
+    width: 200px;
+    font-size: 20px;
+    font: message-box;
+    padding: 10px;
+    height: 50px;
+    border-radius: 16px;
+    margin-top: 20px;
+    border: black;
+}
+
+h4 {
+    font-size: 30px;
+    float: left;
+}
+
+.titre-nombre {
+     margin-top: 20px;
+     float: left;
+}
+
+.nombre  {
+   float: right;
+   background-color: rgb(143, 209, 235);
+  margin-right: 540px;
+  margin-top: 30px;
+  font-size: 15px;
+}
+
+.present {
+    margin-top:25px ;
+    background-color: rgb(143, 209, 235);
+    font-size: 20px;
+}
+
+.titre-present {
+    margin-left: 345px;
+    margin-top: 20px;
+    padding-right: 20px;
+}
+
+.envoyer {
+        background-color: rgb(143, 209, 235);
+        width: 130px;
+        font-size: 20px;
+        margin-top: 20px;
+        margin-left: 670px;
+        border: black;  
+        border-radius : 15px;
+    
+    }
+
+    .couleur {
+        margin-left: 38px;
+        margin-top: -88px;
+        font-size: 18px;
+    }
+
+    .imgcouleur {
+        width: 10%;
+       margin-left: 95px;
+        margin-top: -45px;
+    }
+
+    .mess {
+        background-color: rgb(143, 209, 235);
+        width: 350px;
+        font-size: 20px;
+        font: message-box;
+        padding: 10px;
+        margin-left: 450px;
+        height: 100px;
+        border-radius: 16px;
+        margin-top: 20px;
+        border: black;
+        
+    }
+
+
+/*--FOOTER--*/
+footer{
+    
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+}
+
+#fleche-gauche{
+    float: left;
+    font-size: 64px;
+    margin-left: 50px;
+    color: black;
+}
+@media screen and (max-width: 600px){
+
+   
+
+body {
+    background-image: url(images/3eme\ page.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 714px;
+}
+
+.titres {
+    margin-top: 28px;
+    font-size: 35px
+
+}
+.prenom {
+    background-color: rgb(143, 209, 235);
+    width: 217px;
+    font-size: 13px;
+    padding: 10px;
+    margin-left: 20px;
+    margin-bottom: -9px;
+    height: 29px;
+}
+
+.mail {
+    background-color: rgb(143, 209, 235);
+    width: 216px;
+    font-size: 16px;
+    margin-bottom: -21px;
+    padding: 11px;
+    margin-left: 20px;
+    height: 17px;
+}
+
+.mess {
+    background-color: rgb(143, 209, 235);
+    width: 250px;
+    font-size: 13px;
+    margin-bottom: 20px;
+    padding: 11px;
+    margin-left: 20px;
+}
+
+.titre-present {
+    margin-left: 5px;
+    margin-top: 20px;
+    padding-right: 20px;
+}
+
+.present {
+    margin-top: 25px;
+    background-color: rgb(143, 209, 235);
+    font-size: 20px;
+    width: 217px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.envoyer {
+    background-color: rgb(143, 209, 235);
+    width: 130px;
+    font-size: 20px;
+    margin-top: 45px;
+    margin-left: 182px;
+}
+
+.imgcouleur {
+    width: 10%;
+    margin-left: 279px;
+    margin-top: -147px;
+    margin-bottom: 56px;
+}
+
+    .couleur {
+        margin-top: -70px;
+    }
+
+
+
+}
+
+
+@media screen and (min-width: 750px) {
+   
+    body {
+        background-image: url(images/3eme\ page.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 714px;}
+}
+@media screen and (min-width: 370px) and (max-width:420px){
+.mess {
+    background-color: rgb(143, 209, 235);
+    width: 250px;
+    font-size: 13px;
+    margin-bottom: 69px;
+    padding: 11px;
+    margin-left: 20px;
+}
+
+.imgcouleur {
+    width: 10%;
+    margin-left: 285px;
+    margin-top: -151px;
+    margin-bottom: 72px;
+}
+
+}
+@media screen and (min-width: 760px)  {
+    .titres {
+        display: flex;
+        justify-content: center;
+        margin-top: -42px;
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+.prenom {
+    background-color: rgb(143, 209, 235);
+    width: 200px;
+    font-size: 20px;
+    font: message-box;
+    padding: 10px;
+    margin-left: 284px;
+    height: 50px;
+    border-radius: 16px;
+    margin-top: 1px;
+    border: black;
+}
+
+.mail {
+    background-color: rgb(143, 209, 235);
+    width: 200px;
+    font-size: 20px;
+    font: message-box;
+    padding: 10px;
+    margin-left: 286px;
+    height: 50px;
+    border-radius: 16px;
+    margin-top: 20px;
+    border: black;
+}
+
+.mess {
+    background-color: rgb(143, 209, 235);
+    width: 350px;
+    font-size: 20px;
+    font: message-box;
+    padding: 10px;
+    margin-left: 450px;
+    height: 100px;
+    border-radius: 16px;
+    margin-top: 20px;
+    border: black;
+    display: block;
+    justify-content: center;
+}
+
+.envoyer {
+    background-color: rgb(143, 209, 235);
+    width: 130px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 435px;
+    border: black;
+    border-radius: 15px;
+}
+.couleur {
+    margin-left: 218px;
+    margin-top: 57px;
+    font-size: 18px;
+}
+.imgcouleur {
+    width: 10%;
+    margin-left: 12px;
+    margin-top: 31px;
+}
+}
+
+@media screen and (min-width: 760px) {
+
+.prenom {
+    background-color: rgb(143, 209, 235);
+    width: 200px;
+    font-size: 20px;
+    font: message-box;
+    padding: 10px;
+   
+    height: 50px;
+    border-radius: 16px;
+    margin-top: 1px;
+    border: black;
+    margin-bottom: 51px;
+    display: block;
+    justify-content: center;
+}
+
+.mail {
+    background-color: rgb(143, 209, 235);
+    width: 200px;
+    font-size: 20px;
+    font: message-box;
+    padding: 10px;
+   
+    height: 50px;
+    border-radius: 16px;
+    margin-top: 17px;
+    border: black;
+    display: block;
+    justify-content: center;
+}
+
+.mess {
+    background-color: rgb(143, 209, 235);
+    width: 408px;
+    font-size: 20px;
+    font: message-box;
+    padding: 10px;
+    
+    height: 188px;
+    border-radius: 16px;
+    margin-top: 20px;
+    border: black;
+    display: block;
+    justify-content: center;
+}
+
+.imgcouleur {
+    width: 8%;
+    margin-left: 12px;
+    margin-top: 59px;
+}
+
+
+
+}

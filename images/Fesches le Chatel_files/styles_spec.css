@@ -1,0 +1,189 @@
+@import "../styles.css";
+
+/***********************************
+ *
+ * PARAMETRAGES SPECIFIQUES
+ * par rapport a chaque gabarit 
+ *
+ ***********************************/
+ 
+BODY { background:url('fond.jpg') repeat-x #AFE0F7; } /* fond general */
+DIV#contenu { background:url('fondCorps.jpg') #F2F2F2; } /* fond de la zone contenu texte */
+DIV#dklik { background:url('logoDKLIK.png') no-repeat; }
+/* parametrages specifiques du menu */
+DIV#menuHaut { background:url('menu-haut.jpg'); background-color:none; }
+DIV#menuBas {	background:url('menu-bas.jpg'); background-color:none; }
+DIV#menu { background:url('fond-menu.jpg') #44C0EB; }
+DIV#menu UL.menuUL LI.level1 { border-bottom:1px solid #72CFF0; }
+DIV#menu UL.menuUL LI.level1 A { color:white; }
+DIV#menu UL.menuUL LI.level1:hover {	background-color:#72CFF0; }
+DIV#menu UL.menuUL LI.level2 A {	color:white; }
+DIV#menu UL.menuUL LI.level2:hover {	background-color:#72CFF0; }
+/* ces 3 params sont necessaire ici par rapport a l ordre de definition des balises */
+DIV#menu UL.menuUL LI.open {	cursor:default; }
+DIV#menu UL.menuUL LI.open:hover {	background:none; }
+DIV#menu UL.menuUL LI.fin { border:0px; }
+DIV#menu UL.menuUL LI.selection, UL.menuUL_level2 LI.selection { background-color:#72CFF0; }
+
+DIV#menu UL.menuUL_level3 {
+	list-style-type: none;
+	padding-left: 20px;
+}
+
+/* rootline */
+DIV#rootline { color:#535458; }
+DIV#rootline A { color:#535458; }
+DIV#rootline A:hover { color:#000000; }
+
+/* corps */
+DIV#corps, DIV#corps P, P { color:#535458; }
+P.bodytext IMG, DIV.csc-textpic IMG { border:3px solid #44C0EB; margin:0px; }
+h6 { color:#44C0EB; }
+DIV.csc-textpic-intext-left IMG { margin-right:120px; }
+DIV#corps A, DIV#corps A:link, DIV#corps A:visited, DIV#corps A:active, DIV#corps A:hover { color:#D62E51; }
+
+/* footer */
+DIV#footer P { color:#1A171B; }
+DIV#footer P A { color:#1A171B; }
+
+
+#tabProjets {
+  
+}
+
+#divProjets {
+  background:#DCF0F9;
+}
+
+/* --------------------------------
+ *
+ * AGENDA
+ *
+ * -------------------------------- */
+DIV.HomeBandeauAgenda { background:url('bandeau_agenda.jpg'); }
+DIV.VoirToutAgenda { background:url('voirToutAgenda.jpg'); }
+TABLE.HomeAgendaTable { background:url('fond_agenda.jpg'); }
+DIV.HomeBasAgenda { background:url('bas_agenda.jpg'); }
+
+/* Titre de l'agenda sur la page d'accueil */
+DIV#corps DIV.agenda-list-container DIV.news-list-item A { font-family: Arial; font-weight: bold; font-size: 13px; color: #000000; text-decoration: none; }
+DIV#corps DIV.agenda-list-container DIV.news-list-item A:link { font-family: Arial; font-weight: bold; font-style: normal; font-size: 13px; color: #000000; text-decoration: none; }
+DIV#corps DIV.agenda-list-container DIV.news-list-item A:visited { font-family: Arial; font-weight: bold; font-style: normal; font-size: 13px; color: #000000; text-decoration: none; }
+DIV#corps DIV.agenda-list-container DIV.news-list-item A:active { font-family: Arial; font-weight: bold; font-style: normal; font-size: 13px; color: #000000; text-decoration: none; }
+DIV#corps DIV.agenda-list-container DIV.news-list-item A:hover { font-family: Arial; font-weight: bold; font-style: normal; font-size: 13px; color: #000000; text-decoration: underline; }
+
+/* Sous-titre de l'agenda sur la page d'accueil */
+SPAN#DklikAgendaHomeAccroche P { color: #000000; }
+
+P.DklikAgendaHomeContent { color: #424244; }
+
+H2.DklikAgendaHomeCategory { color: #D62E51; }
+
+H2.DklikAgendaHome { margin: 0px; padding: 0px; margin-bottom: 4px; padding-right: 10px; }
+H2.DklikAgendaHome A { font-family: Arial; font-weight: bold; font-style: normal; font-size: 14px; color: #000000; text-decoration: none; }
+H2.DklikAgendaHome A:link { font-family: Arial; font-weight: bold; font-style: normal; font-size: 14px; color: #000000; text-decoration: none; }
+H2.DklikAgendaHome A:visited { font-family: Arial; font-weight: bold; font-style: normal; font-size: 14px; color: #000000; text-decoration: none; }
+H2.DklikAgendaHome A:active { font-family: Arial; font-weight: bold; font-style: normal; font-size: 14px; color: #000000; text-decoration: none; }
+H2.DklikAgendaHome A:hover { font-family: Arial; font-weight: bold; font-style: normal; font-size: 14px; color: #000000; text-decoration: none; }
+
+/* Mode liste all : En savoir plus */
+DIV#corps DIV.news-list-item DIV.DklikAgendaEnSavoirPlus A { color: #D62E51; }
+
+/* Balise H1 dans le detail d'un agenda */
+DIV.actualites-single-item H1 { color: #000000; }
+
+
+SPAN.news-list-morelink { display: none; }
+
+A.DklikProjetHomeAllProjects { font-family: Arial; font-weight: bold; font-style: normal; font-size: 12px; color: #000000; text-decoration: none; }
+A.DklikProjetHomeAllProjects:link { font-family: Arial; font-weight: bold; font-style: normal; font-size: 12px; color: #000000; text-decoration: none; }
+A.DklikProjetHomeAllProjects:visited { font-family: Arial; font-weight: bold; font-style: normal; font-size: 12px; color: #000000; text-decoration: none; }
+A.DklikProjetHomeAllProjects:active { font-family: Arial; font-weight: bold; font-style: normal; font-size: 12px; color: #000000; text-decoration: none; }
+A.DklikProjetHomeAllProjects:hover { font-family: Arial; font-weight: bold; font-style: normal; font-size: 12px; color: #000000; text-decoration: none; }
+
+/*
+ * Flex Magazine PDF sur la page d'accueil
+ * On modifie ici principalement les couleurs
+ */
+DIV.MagPdfTitre, DIV.MagPdfDownload {
+	color: #000000;
+}
+
+DIV.MagPdfDownload P.bodytext A:link,
+DIV.MagPdfDownload P.bodytext A:active,
+DIV.MagPdfDownload P.bodytext A:visited,
+DIV.MagPdfDownload P.bodytext A:hover {
+	color: #D62E51;
+}
+
+/* --------------------------------
+ *
+ * TT_NEWS STANDARD
+ *
+ * -------------------------------- */
+SPAN.DklikListNewsAccueilEnSavoirPlus { color: #D62E51; }
+SPAN.DklikListNewsAccueilEnSavoirPlus A { color: #D62E51; }
+
+/* --------------------------------
+ *
+ * LES GRANDS PROJETS
+ *
+ * -------------------------------- */
+DIV.projets-bandeau1 { background:url('bandeau_projets_1.jpg'); background-color:#DCF0F9; }
+DIV.projets-bandeau2 { background:url('bandeau_projets_2.jpg'); background-color:none; }
+
+DIV#backHome A { font-family: Arial; font-weight: normal; font-style: normal; font-size: 11px; color: #555555; text-decoration: none; }
+DIV#backHome A:hover { text-decoration: underline; }
+
+
+/**********************************
+ *
+ * ACTUALITES
+ *
+ **********************************/
+DIV.HomeBandeauActualites { background:url('bandeau_actualites.jpg'); }
+DIV.DivAllActualites { background:url('toutesLesActualites.jpg'); }
+
+/* Image */
+DIV#corps DIV.news-list-item IMG { border: 2px solid #44BFE9; }
+
+/* Titre de l'actu sur la page d'accueil */
+DIV#corps DIV.news-list-item A { color: #000000; }
+DIV#corps DIV.news-list-item A:link { color: #000000; }
+DIV#corps DIV.news-list-item A:visited { color: #000000; }
+DIV#corps DIV.news-list-item A:active { color: #000000; }
+DIV#corps DIV.news-list-item A:hover { color: #000000; }
+
+/* Lien En savoir plus */
+DIV#corps DIV.news-list-item SPAN.DklikListNewsAccueilEnSavoirPlus A { color: #D62E51; }
+DIV#corps DIV.news-list-item SPAN.DklikListNewsAccueilEnSavoirPlus A:link { color: #D62E51; }
+DIV#corps DIV.news-list-item SPAN.DklikListNewsAccueilEnSavoirPlus A:visited { color: #D62E51; }
+DIV#corps DIV.news-list-item SPAN.DklikListNewsAccueilEnSavoirPlus A:active { color: #D62E51; }
+DIV#corps DIV.news-list-item SPAN.DklikListNewsAccueilEnSavoirPlus A:hover { color: #D62E51; }
+
+/**********************************
+ *
+ * TABLEAUX CSS
+ *
+ **********************************/
+TABLE.contenttable TR.tr-0 TD.td-0,
+	TABLE.contenttable TR.tr-0 TD.td-1, 
+	TABLE.contenttable TR.tr-0 TD.td-2, 
+	TABLE.contenttable TR.tr-0 TD.td-3,
+	TABLE.contenttable TR.tr-0 TD.td-4,
+	TABLE.contenttable TR.tr-0 TD.td-5,
+	TABLE.contenttable TR.tr-0 TD.td-6,
+	TABLE.contenttable TR.tr-0 TD.td-7,
+	TABLE.contenttable TR.tr-0 TD.td-8,
+	TABLE.contenttable TR.tr-0 TD.td-9 {
+	background-color: #44BFE9;
+}
+
+
+/**********************************
+ *
+ * FICHIER PDF
+ *
+ **********************************/
+DIV.MagPdfBandeau { background:url('titre.jpg'); }
+TD.MagPdfFond { background:url('fondMag.jpg'); }

